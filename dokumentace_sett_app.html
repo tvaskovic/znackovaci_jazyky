@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dokumentace - settings application</title>
+	</head>
+	<body>
+		<header>
+			<h1>Dokumentace - settings application</h1>
+		</header>
+
+		<nav id="menu">
+			<h2>Obsah</h2>
+			<ul>
+				<li><a href="#menu">Obsah s odkazy</a></li>
+				<li><a href="#uvod">Úvod</a></li>
+				<li><a href="#metodika">Metodika</a></li>
+				<li><a href="#elementy">Popis elementů a atributů</a></li>
+				<li><a href="#transformace">Popis transformace</a></li>
+				<li><a href="#zaver">Závěr</a></li>
+				<li><a href="#zapati">Zápatí</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<article>
+				<section id="uvod">
+					<h2>Úvod</h2>
+					<p>
+						Úkolem v této práci bylo vytvoření XML dokumentu, XSD schématu, XSL transformace do JSON a dokumentace	
+						na předmět Značkovací jazyky na téma nastavení existující/fiktivní aplikace.
+					</p>
+				</section>
+
+				<section id="metodika">
+					<h2>Metodika</h2>
+					<p>
+						Celá tato práce byla vytvořena v textovém editoru Sublime Text 2 (možné stáhnot zde <a href="https://www.sublimetext.com/3">Sublimetext</a>), kdy byl nejprve vytvořen XML dokument na nastavení fiktivní aplikace, v kterém byly vymyšleny vlastní elementy a atributy do kterych byla ukládány informace této aplikace.
+						Poté bylo vytvořeno XML Schéma za pomoci online tranformátoru dostupném zde <a href="http://www.freeformatter.com/xsd-generator.html">Freeformater</a> a célé XML bylo přetransformováno do XSD souboru. Následovalo vytvoření XSL dokumentu transformovaného do JSON. Tato transformace proběhla vložením XML souboru do online transformátoru dostupném zde <a href="http://convertjson.com/xml-to-json.htm">Convertjson.com</a>. Po transformaci XML do XSL byl soubor ručně dotvořen do JSON kódu.
+					</p>
+				</section>
+
+				<section id="elementy">
+					<h2>Popis elementů a atributů</h2>
+
+					<table border="1">
+						<tr>
+							<th>Název elementu či atributu</th>
+							<th>Stručný popis</th>
+						</tr>
+						<tr>
+							<td>game</td>
+							<td>Element udávajíci základní parametry hry jako je verze hry a v jákem je modu(online/offline).</td>
+						</tr>
+						<tr>
+							<td>version</td>
+							<td>Atribut elmentu game udavající verzi hry.</td>
+						</tr>
+						<tr>
+							<td>status</td>
+							<td>Atribut elementu status uvádí v jakém režimu hry je, zdali online nebo offline.</td>
+						</tr>
+						<tr>
+							<td>user</td>
+							<td>Element user nám udává základní údaje o uživateli</td>
+						</tr>
+						<tr>
+							<td>id</td>
+							<td>Atribut elementu user, id přiřazuje unikátní identifikační číslo každému registrovanému uživateli</td>
+						</tr>
+						<tr>
+							<td>name</td>
+							<td>Element name udává křestní jméno uživatele</td>
+						</tr>
+						<tr>
+							<td>surname</td>
+							<td>Element surname udává přijmení uživatele</td>
+						</tr>
+						<tr>
+							<td>age</td>
+							<td>Element age udává věk uživatele</td>
+						</tr>
+						<tr>
+							<td>location</td>
+							<td>Element location označuje poluhu zařízení</td>
+						</tr>
+						<tr>
+							<td>country</td>
+							<td>Podelement country označuje v lokaci stát</td>
+						</tr>
+						<tr>
+							<td>city</td>
+							<td>Podelement city označuje v lokaci město</td>
+						</tr>
+						<tr>
+							<td>nationality</td>
+							<td>Element nationality udává uživatelův věk</td>
+						</tr>
+						<tr>
+							<td>login</td>
+							<td>Element login je přihlašovací jméno daného uživatele</td>
+						</tr>
+						<tr>
+							<td>visible</td>
+							<td>Atribut elementu login nabízí uživateli možnost skrýt svoje přihlašovací jméno jiným uživatelům</td>
+						</tr>
+						<tr>
+							<td>password</td>
+							<td>Element password udává uživatelovo zvoléné heslo ke svému účtu</td>
+						</tr>
+						<tr>
+							<td>ip</td>
+							<td>Element ip udává ip adresu používaného zařízení</td>
+						</tr>
+						<tr>
+							<td>video</td>
+							<td>Element video sdružuje veškérá nastavení týkající se grafického rozhraní</td>
+						</tr>
+						<tr>
+							<td>type</td>
+							<td>Atribut elementu video udávající kvalitu zobrazení</td>
+						</tr>
+						<tr>
+							<td>display_mode</td>
+							<td>Element display_mode určuje rozlišení obrazovky</td>
+						</tr>
+						<tr>
+							<td>terrain</td>
+							<td>Element terrain nabízí možnost natavení kvality zobrazení terénu ve třech možnostech (low/medium/hight)</td>
+						</tr>
+						<tr>
+							<td>geometry</td>
+							<td>Element geometry nabízí možnost natavení kvality geometrie ve třech možnostech (low/medium/hight)</td>
+						</tr>
+						<tr>
+							<td>texture</td>
+							<td>Element texture nabízí možnost natavení kvality zobrazení textur ve třech možnostech (low/medium/hight)</td>
+						</tr>
+						<tr>
+							<td>lighting</td>
+							<td>Element lighting nabízí možnost natavení kvality osvětlení ve třech možnostech (low/medium/hight)</td>
+						</tr>
+						<tr>
+							<td>dynamic_shadow</td>
+							<td>Element dynamic_shadow nabízí možnost natavení kvality pohyblivých stínu ve třech možnostech (low/medium/hight)</td>
+						</tr>
+						<tr>
+							<td>dynamic_light</td>
+							<td>Element dynamic_light nabízí možnost natavení kvality pohyblivého osvětlení ve třech možnostech (low/medium/hight)</td>
+						</tr>
+						<tr>
+							<td>texture_filtering</td>
+							<td>Element texture_filtering nabízí možnost natavení filtrování textur ve třech možnostech (low/medium/hight)</td>
+						</tr>
+						<tr>
+							<td>audio</td>
+							<td>Element audio sdružuje veškerá nastavení týkající se zvuku</td>
+						</tr>
+						<tr>
+							<td>sound_quality</td>
+							<td>Element sound_quality nabízí možnost natavení kvality zvuku ve třech možnostech (low/medium/hight)</td>
+						</tr>
+						<tr>
+							<td>game_volume</td>
+							<td>Potomek elementu audio, který obsahuje úroveň hlasitosti efektu, hudby a zvuku na pozadi</td>
+						</tr>
+						<tr>
+							<td>effects</td>
+							<td>Podelement effects elementu game_volume nastavující hlasitost efektu</td>
+						</tr>
+						<tr>
+							<td>music</td>
+							<td>Podelement music elementu game_volume nastavující hlasitost hudby</td>
+						</tr>
+						<tr>
+							<td>voice_over</td>
+							<td>Podelement voice_over elementu game_volume nastavující hlasitost hlasu</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>Atribut nastavující škálu hlasitosti od 0 do 100 u podelementu elemtu game_volume</td>
+						</tr>
+						<tr>
+							<td>language</td>
+							<td>Element umožňující volbu jazyku v aplikaci</td>
+						</tr>
+						<tr>
+							<td>subtitles</td>
+							<td>Element nastavují možnosti titulků</td>
+						</tr>
+						<tr>
+							<td>language</td>
+							<td>Atribut elementu subtitles nastavující jazyk titulků</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribud povolující zapnutí nebo vypnutí funkce (true/false)</td>
+						</tr>
+						<tr>
+							<td>sys_date</td>
+							<td>Element sdružující informace o datumu</td>
+						</tr>
+						<tr>
+							<td>day</td>
+							<td>Podelement day elementu sys_date udává den</td>
+						</tr>
+						<tr>
+							<td>mounth</td>
+							<td>Podelement mounth elementu sys_date udává měsíc</td>
+						</tr>
+						<tr>
+							<td>year</td>
+							<td>Podelement year elementu sys_date udává rok</td>
+						</tr>
+						<tr>
+							<td>sys_time</td>
+							<td>Element sdružující informace o systémovém času</td>
+						</tr>
+						<tr>
+							<td>zone</td>
+							<td>Atribut zone elementu sys_time určuje časové pásmo</td>
+						</tr>
+						<tr>
+							<td>hour</td>
+							<td>Podelement hour elementu sys_time udává hodiny</td>
+						</tr>
+						<tr>
+							<td>minutes</td>
+							<td>Podelement minutes elementu sys_time udává minuty</td>
+						</tr>
+						<tr>
+							<td>seconds</td>
+							<td>Podelement seconds elementu sys_time udává sekundy</td>
+						</tr>
+						<tr>
+							<td>periphery</td>
+							<td>Element periphery sdružuje nastavení ovladacích herních prvku - myš, klávesnice</td>
+						</tr>
+						<tr>
+							<td>mouse</td>
+							<td>Podelement mouse elementu periphery sdružuje nastavení myši</td>
+						</tr>
+						<tr>
+							<td>change</td>
+							<td>Podelement change elementu mouse nabízí možnost změny funkce tlačítek</td>
+						</tr>
+						<tr>
+							<td>left_to_right</td>
+							<td>Podelement left_to_right elementu change nabízí možnost změny levého tlačítka za pravé</td>
+						</tr>
+						<tr>
+							<td>scroll_up_to_down</td>
+							<td>Podelement scroll_up_to_down elementu change nabízí možnost změny ze spoda nahoru</td>
+						</tr>
+						<tr>
+							<td>axis</td>
+							<td>Podelement axis elementu mouse nabízí změnu osy pohybu myši</td>
+						</tr>
+						<tr>
+							<td>vertical</td>
+							<td>Podelement vertical elementu axis nabízí změnu vertikální osy</td>
+						</tr>
+						<tr>
+							<td>horizontal</td>
+							<td>Podelement horizontal elementu axis nabízí změnu horizontalní osy</td>
+						</tr>
+						<tr>
+							<td>reverse</td>
+							<td>Podelement reverse elementu vertical a horizonatal obsahuje atribut enabled určující změnu os na reverzní</td>
+						</tr>
+						<tr>
+							<td>keyboard</td>
+							<td>Podelement keyboard elementu periphery sdružující nastavení kávesnice</td>
+						</tr><tr>
+							<td>shortcuts</td>
+							<td>Podelement shortcuts elementu keyboard nabízí nastavení klávesových zkratek a jejích zapnutí pomocí atributu enabled</td>
+						</tr><tr>
+							<td>m</td>
+							<td>Podelement m elementu shortcuts zobrazuje zkratku pro mapu</td>
+						</tr><tr>
+							<td>n</td>
+							<td>Podelement n elementu shortcuts zobrazuje zkratku pro navigaci</td>
+						</tr><tr>
+							<td>k</td>
+							<td>Podelement k elementu shortcuts zobrazuje zkratku pro komunikaci</td>
+						</tr><tr>
+							<td>p</td>
+							<td>Podelement p elementu shortcuts zobrazuje zkratku pro pausu</td>
+						</tr>
+					</table>
+				</section>
+
+				<section id="transformace">
+					<h2>Popis transformace</h2>
+					<h3>JSON transformace</h3>
+					<p>Pro transformaci do JSON jsem použil online nástroj <a href="http://convertjson.com/xml-to-json.htm">Convertjson.com</a>. Po té, co jsem vložil XML kód z mého projektu, musel jsem do dalšího okna začít psát transformaci XSL. Výsledkem byl JSON kód.</p>
+				</section>
+
+				<section id="zaver">
+					<h2>Závěr</h2>
+					<p>Práce na tomto projektu byla velmi přínosná a naučíl jsem se díky ní mnoho nového ze světa značkovacích jaziků. 
+					Nejnáročnější z celé práce byla transformace do JSON. Práce vznikala za použití textového editoru Sublime Text 2, který zvýrazňuje elemty a atributy čimž se stáva zdroják přehlednější.
+					</p>
+				</section>
+			</article>
+		</main>
+
+		<footer id="zapati">
+			<hr>
+			<table>
+				<tr>
+					<td><a target="_blank" href="https://github.com/tvaskovic/znackovaci_jazyky">Odkaz na Github repozitář</a></td>
+				</tr>
+				<tr>
+					<td>Tomáš Vaškovic</td>
+				</tr>
+			</table>
+		</footer>
+	</body>
+</html>
