@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<game version="1.31.01" status="online"/>
+	<user id="145733">
+		<name>Jan</name>
+		<surname>Novák</surname>
+		<age>25</age>
+		<location>
+			<country>England</country>
+			<city>London</city>
+		</location>
+	 	<nationality>CZ</nationality>
+		<login visible="true">jnov012</login>
+		<password>123456jn</password>
+		<ip>192.168.1.124</ip>
+	</user>
+	<user id="145968">
+		<name>Martin</name>
+		<surname>Hanák</surname>
+		<age>31</age>
+		<location>
+			<country>Czech Republic</country>
+			<city>Prague</city>
+		</location>
+	 	<nationality>CZ</nationality>
+		<login visible="true">mhan015</login>
+		<password>689754mh</password>
+		<ip>192.168.1.148</ip>
+	</user>
+	<user id="128788">
+		<name>David</name>
+		<surname>Malátný</surname>
+		<age>19</age>
+		<location>
+			<country>Czech Republic</country>
+			<city>Brno</city>
+		</location>
+	 	<nationality>CZ</nationality>
+		<login visible="false">dmal027</login>
+		<password>david321</password>
+		<ip>192.168.1.115</ip>
+	</user>
+	<user id="145966">
+		<name>John</name>
+		<surname>Bush</surname>
+		<age>48</age>
+		<location>
+			<country>USA</country>
+			<city>New York</city>
+		</location>
+	 	<nationality>USA</nationality>
+		<login visible="true">jbus037</login>
+		<password>bushman</password>
+		<ip>192.168.1.64</ip>
+	</user>
+	<user id="197112">
+		<name>Aneta</name>
+		<surname>Pěkná</surname>
+		<age>20</age>
+		<location>
+			<country>Jamaica</country>
+			<city>Kingston</city>
+		</location>
+	 	<nationality>CZ</nationality>
+		<login visible="true">apek123</login>
+		<password>smudla11</password>
+		<ip>192.168.1.199</ip>
+	</user>
+	<video type="HD">
+		<display_mode>1366x768</display_mode>
+		<terrain>medium</terrain>
+		<geometry>hight</geometry>
+		<texture>hight</texture>
+		<lighting>medium</lighting>
+		<dynamic_shadows>medium</dynamic_shadows>
+		<dynamic_light>medium</dynamic_light>
+		<texture_filtering>medium</texture_filtering>
+	</video>
+	<audio>
+		<sound_quality>medium</sound_quality>
+		<game_volume>
+			<effects value="100"/>
+			<music value="33"/>
+			<voice_over value="100"/>
+		</game_volume>
+		<language>EN</language>
+		<subtitles enabled="false" language="EN"/>
+	</audio>
+	<sys_date>
+		<day>10</day>
+		<mounth>4</mounth>
+		<year>2017</year>
+	</sys_date>
+    <sys_time zone="cet">
+    	<hour>15</hour>
+    	<minutes>30</minutes>
+    	<seconds>00</seconds>
+    </sys_time>
+	<periphery>
+		<mouse>
+			<buttons>
+				<change>
+					<left_to_rigt enabled="true"/>
+					<scroll_up_to_down enabled="false"/>
+				</change>
+			</buttons>
+			<axis>
+				<vertical>
+					<reverse enabled="false"/>
+				</vertical>
+				<horizontal>
+					<reverse enabled="false"/>
+				</horizontal>
+			</axis>
+		</mouse>
+		<keyboard>
+			<shortcuts>
+				<m enabled="true">map</m>
+				<n enabled="false">navigation</n>
+				<k enabled="true">communication</k>
+				<p enabled="true">pause</p>
+			</shortcuts>
+		</keyboard>
+	</periphery>
+</settings>

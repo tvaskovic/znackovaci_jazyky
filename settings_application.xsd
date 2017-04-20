@@ -1,0 +1,259 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="game">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="version"/>
+                <xs:attribute type="xs:string" name="status"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="user" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:string" name="surname"/>
+              <xs:element type="xs:byte" name="age"/>
+              <xs:element name="location">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="country"/>
+                    <xs:element type="xs:string" name="city"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="nationality"/>
+              <xs:element name="login">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="visible" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="password"/>
+              <xs:element type="xs:string" name="ip"/>
+            </xs:sequence>
+            <xs:attribute type="xs:int" name="id" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="video">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="display_mode"/>
+              <xs:element type="xs:string" name="terrain"/>
+              <xs:element type="xs:string" name="geometry"/>
+              <xs:element type="xs:string" name="texture"/>
+              <xs:element type="xs:string" name="lighting"/>
+              <xs:element type="xs:string" name="dynamic_shadows"/>
+              <xs:element type="xs:string" name="dynamic_light"/>
+              <xs:element type="xs:string" name="texture_filtering"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="type"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="audio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="sound_quality"/>
+              <xs:element name="game_volume">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="effects">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="value"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="music">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="value"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="voice_over">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="value"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="language"/>
+              <xs:element name="subtitles">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="enabled"/>
+                      <xs:attribute type="xs:string" name="language"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sys_date">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="day"/>
+              <xs:element type="xs:byte" name="mounth"/>
+              <xs:element type="xs:short" name="year"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sys_time">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="hour"/>
+              <xs:element type="xs:byte" name="minutes"/>
+              <xs:element type="xs:byte" name="seconds"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="zone"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="periphery">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mouse">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="buttons">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="change">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="left_to_rigt">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="scroll_up_to_down">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="axis">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="vertical">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="reverse">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="horizontal">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="reverse">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enabled"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="keyboard">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="shortcuts">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="m">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="enabled"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="n">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="enabled"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="k">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="enabled"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="p">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="enabled"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
